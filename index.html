@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./ASSETS/6ae0ab45a82650b1c435a1a3885924e0.jpg" type="image/x-icon">
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <!-- Player 1 -->
+      <section class="player player_0 player_active">
+        <h2 class="name" id="name_0">Player 1</h2>
+        <p class="score" id="score_0">43</p>
+        <div class="current">
+          <p class="current_label">Current</p>
+          <p class="current_score" id="current_0">0</p>
+        </div>
+      </section>
+      <!-- Player 2 -->
+      <section class="player player_1">
+        <h2 class="name" id="name_1">Player 2</h2>
+        <p class="score" id="score_1">24</p>
+        <div class="current">
+          <p class="current_label">Current</p>
+          <p class="current_score" id="current_1">0</p>
+        </div>
+      </section>
+      <!-- interface -->
+      <img src="./ASSETS/dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn_new">🔄 New game</button>
+      <button class="btn btn_roll">🎲 Roll dice</button>
+      <button class="btn btn_hold">📥 Hold</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
