@@ -89,7 +89,7 @@ roll_dice_button.addEventListener("click", function() {
 
 /* -------------------------------------------------------------------------- */
 
-// 🧡 Holding current score:
+// 🧡 Holding current score: 
 
 hold_button.addEventListener("click", function() {
     if (playing) {
@@ -113,7 +113,7 @@ hold_button.addEventListener("click", function() {
 
 /* -------------------------------------------------------------------------- */
 
-// 🧡 Reset the Game when clicked "new game button"
+// 🧡 Reset the Game when clicked "new game button" 
 
 new_game_button.addEventListener("click", function () {
     // button working again
