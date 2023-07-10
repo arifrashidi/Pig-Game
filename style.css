@@ -33,14 +33,14 @@ body {
 /*🔸 LAYOUT */
 main {
   position: relative;
-  width: 100rem;
+  max-width: 100rem;
+  width: 100vw;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
   border-radius: 9px;
-  overflow: hidden;
   display: flex;
 }
 main::after {
@@ -54,7 +54,10 @@ main::after {
 
 .player {
   flex: 50%;
-  padding: 9rem;
+  padding-top: clamp(5rem, 6vw, 9rem);
+  padding-bottom: clamp(2rem, 6vw, 9rem);
+  padding-right: clamp(1.2rem, 6vw, 9rem);
+  padding-left: clamp(1.2rem, 6vw, 9rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +67,7 @@ main::after {
 /*🔸 ELEMENTS */
 .name {
   position: relative;
-  font-size: 4rem;
+  font-size: clamp(16px, 3.4vw, 34px);
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -73,7 +76,7 @@ main::after {
 }
 
 .score {
-  font-size: 8rem;
+  font-size: clamp(4rem, 5vw, 8rem);
   font-weight: 300;
   color: #c7365f;
   margin-bottom: auto;
@@ -96,6 +99,7 @@ main::after {
   border-radius: 9px;
   color: #fff;
   width: 65%;
+  min-width: 114px;
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
@@ -103,8 +107,9 @@ main::after {
 
 .current_label {
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 1rem;
-  font-size: 1.7rem;
+  font-size: clamp(1.4rem, 2vw, 1.7rem);
   color: #ddd;
 }
 
@@ -121,7 +126,7 @@ main::after {
   background: none;
   border: none;
   font-family: inherit;
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 400;
@@ -141,7 +146,7 @@ main::after {
 }
 
 .btn::first-letter {
-  font-size: 2.4rem;
+  font-size: clamp(1.6rem, 1.4vw, 2.4rem);
   display: inline-block;
   margin-right: 0.7rem;
 }
@@ -171,8 +176,9 @@ main::after {
   left: 50%;
   top: 16.5rem;
   transform: translateX(-50%);
-  height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  width: clamp(7rem, 20vw, 10rem);
+  aspect-ratio: 1/1;
 }
 
 
@@ -189,4 +195,48 @@ main::after {
 }
 .player_winner {
   background-color: #2f2f2f;
+}
+
+
+/*🔸 Media Queries: 810px */
+
+@media (max-width: 810px) {
+  main {
+    height: 50rem;
+  }
+  .btn {
+    padding: 0.6rem 1.4rem;
+  }
+  .btn_roll {
+    top: 27rem;
+  }
+  .btn_hold {
+    top: 32rem;
+  }
+  .dice {
+    top: 14rem;
+  }
+}
+
+/*🔸 Media Queries: 480px */
+
+@media (max-width: 480px) {
+  main {
+    height: 45rem;
+  }
+  .btn_new {
+    top: -5rem;
+  }
+  .btn_roll {
+    top: 23rem;
+  }
+  .btn_hold {
+    top: 28rem;
+  }
+  .current {
+    padding: 1rem;
+  }
+  .dice {
+    top: 13rem;
+  }
 }
