@@ -240,3 +240,8 @@ main::after {
     top: 13rem;
   }
 }
+
+/*🔸 Nothing */
+.nothing {
+  display: none;
+}
