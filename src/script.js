@@ -68,7 +68,7 @@ roll_dice_button.addEventListener("click", function() {
     let random_dice_number = Math.trunc(Math.random() * 6) + 1;
     // 2. display dice
     display_dice.classList.remove("hidden");
-    display_dice.src = `./ASSETS/dice-${random_dice_number}.png`;
+    display_dice.src = `../ASSETS/dice-${random_dice_number}.png`;
     // 3. if dice is not number 1, add score to current
     if (random_dice_number !== 1) {
         current_score_player = current_score_player + random_dice_number;
