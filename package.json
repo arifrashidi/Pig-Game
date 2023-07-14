@@ -5,7 +5,7 @@
   "default": "index.html",
   "scripts": {
     "bundling": "parcel src/index.html",
-    "building": "parcel build src/index.html"
+    "building": "parcel build src/index.html --no-content-hash"
   },
   "author": "Arif",
   "license": "ISC",
